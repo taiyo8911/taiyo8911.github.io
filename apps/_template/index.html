@@ -7,90 +7,95 @@
   3. アプリアイコンを icon.png として同じフォルダに置く
   4. iOSアプリ／Webアプリで不要なボタンを削除する
   5. プライバシーポリシーの「該当する場合のみ」の項目は、必要なものだけコメントを外す
+  6. 問い合わせボタンの件名（subject=の後ろ）は、ほかのアプリのページの行をコピーして、
+     アプリ名の部分を直すのが簡単（日本語はURLエンコードが必要）
+  7. SUPPORT_EMAILをサポート用のメールアドレスに置き換える
 
   App Store Connect に登録するURL：
     サポートURL：             https://【ドメイン】/apps/【フォルダ名】/
     プライバシーポリシーURL：https://【ドメイン】/apps/【フォルダ名】/#privacy
 -->
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>【アプリ名】 サポート</title>
-  <meta name="description" content="【アプリ名】のサポート、よくある質問、お問い合わせ、プライバシーポリシー。">
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <main class="container">
 
-    <header class="app-header">
-      <img class="app-icon" src="icon.png" alt="" onerror="this.remove()">
-      <div>
-        <h1>【アプリ名】</h1>
-        <p class="lead">【ひとことの説明】</p>
-      </div>
-    </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>【アプリ名】 サポート</title>
+    <meta name="description" content="【アプリ名】のサポート、よくある質問、お問い合わせ、プライバシーポリシー。">
+    <link rel="stylesheet" href="/style.css">
+  </head>
 
-    <p class="actions">
-      <!-- iOSアプリの場合（Webアプリなら削除） -->
-      <a class="button" href="【App StoreのURL】">App Storeで入手</a>
-      <!-- Webアプリの場合（iOSアプリなら削除）
+  <body>
+    <main class="container">
+
+      <header class="app-header">
+        <img class="app-icon" src="icon.png" alt="" onerror="this.remove()">
+        <div>
+          <h1>【アプリ名】</h1>
+          <p class="lead">【ひとことの説明】</p>
+        </div>
+      </header>
+
+      <p class="actions">
+        <!-- iOSアプリの場合（Webアプリなら削除） -->
+        <a class="button" href="【App StoreのURL】">App Storeで入手</a>
+        <!-- Webアプリの場合（iOSアプリなら削除）
       <a class="button" href="/【リポジトリ名】/">Webで開く</a>
       -->
-    </p>
+      </p>
 
-    <nav class="toc">
-      <a href="#about">概要</a>
-      <a href="#faq">よくある質問</a>
-      <a href="#contact">お問い合わせ</a>
-      <a href="#privacy">プライバシーポリシー</a>
-    </nav>
+      <nav class="toc">
+        <a href="#about">概要</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#contact">お問い合わせ</a>
+        <a href="#privacy">プライバシーポリシー</a>
+      </nav>
 
-    <section id="about">
-      <h2>概要</h2>
-      <p>【アプリの紹介文。何ができるアプリか、2〜3文で】</p>
-      <p class="note">対応環境：【例：iOS 17以降 ／ Safari・Chrome最新版】</p>
-    </section>
+      <section id="about">
+        <h2>概要</h2>
+        <p>【アプリの紹介文。何ができるアプリか、2〜3文で】</p>
+        <p class="note">対応環境：【例：iOS 17以降 ／ Safari・Chrome最新版】</p>
+      </section>
 
-    <section id="faq">
-      <h2>よくある質問</h2>
+      <section id="faq">
+        <h2>よくある質問</h2>
 
-      <details>
-        <summary>【質問1】</summary>
-        <p>【回答1】</p>
-      </details>
+        <details>
+          <summary>【質問1】</summary>
+          <p>【回答1】</p>
+        </details>
 
-      <details>
-        <summary>【質問2】</summary>
-        <p>【回答2】</p>
-      </details>
-    </section>
+        <details>
+          <summary>【質問2】</summary>
+          <p>【回答2】</p>
+        </details>
+      </section>
 
-    <section id="contact">
-      <h2>お問い合わせ</h2>
-      <p>ご質問・不具合のご報告は、以下のフォームからお送りください。フォームでアプリ名「【アプリ名】」を選択してください。</p>
-      <p class="actions"><a class="button" href="【GoogleフォームのURL】">お問い合わせフォーム</a></p>
-      <p class="note">返信までお時間をいただく場合があります。</p>
-    </section>
+      <section id="contact">
+        <h2>お問い合わせ</h2>
+        <p>ご質問・不具合のご報告は、以下のボタンからメールでお送りください。</p>
+        <p class="actions"><a class="button" href="mailto:macya.dev@icloud.com?subject=【件名をURLエンコードして入れる】">メールで問い合わせる</a></p>
+        <p class="note">ボタンが動かない場合は、macya.dev@icloud.com 宛てにメールをお送りください。返信までお時間をいただく場合があります。</p>
+      </section>
 
-    <section id="privacy" class="policy">
-      <h2>【アプリ名】 プライバシーポリシー</h2>
-      <p>開発者は、アプリ「【アプリ名】」（以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。</p>
+      <section id="privacy" class="policy">
+        <h2>【アプリ名】 プライバシーポリシー</h2>
+        <p>開発者は、アプリ「【アプリ名】」（以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。</p>
 
-      <h3>1. 取得する情報</h3>
-      <p>本アプリは、氏名・メールアドレス・位置情報などの個人を特定できる情報を収集しません。本アプリで作成・入力されたデータは、利用者の端末内にのみ保存されます。</p>
+        <h3>1. 取得する情報</h3>
+        <p>本アプリは、氏名・メールアドレス・位置情報などの個人を特定できる情報を収集しません。本アプリで作成・入力されたデータは、利用者の端末内にのみ保存されます。</p>
 
-      <!-- ▼ 該当する場合のみコメントを外す（iCloud同期）
+        <!-- ▼ 該当する場合のみコメントを外す（iCloud同期）
       <h3>iCloudによる同期</h3>
       <p>本アプリは、データを端末間で同期するためにAppleのiCloudを利用します。データは利用者のiCloudアカウントに保存され、開発者がその内容を閲覧することはありません。</p>
       -->
 
-      <!-- ▼ 該当する場合のみコメントを外す（アプリ内課金）
+        <!-- ▼ 該当する場合のみコメントを外す（アプリ内課金）
       <h3>アプリ内課金</h3>
       <p>アプリ内課金の決済はAppleが行います。開発者が利用者のクレジットカード情報などの決済情報を取得することはありません。</p>
       -->
 
-      <!-- ▼ 該当する場合のみコメントを外す（広告・アクセス解析）
+        <!-- ▼ 該当する場合のみコメントを外す（広告・アクセス解析）
       <h3>外部サービスの利用</h3>
       <p>本アプリは、以下の外部サービスを利用しています。これらのサービスは、端末の識別子や利用状況などの情報を取得する場合があります。取得される情報と取り扱いについては、各サービスのプライバシーポリシーをご確認ください。</p>
       <ul>
@@ -98,25 +103,26 @@
       </ul>
       -->
 
-      <h3>2. お問い合わせで受け取る情報</h3>
-      <p>お問い合わせフォームから送信されたメールアドレスやお問い合わせ内容は、回答のためにのみ使用し、それ以外の目的には使用しません。</p>
+        <h3>2. お問い合わせで受け取る情報</h3>
+        <p>お問い合わせのメールで受け取ったメールアドレスやお問い合わせ内容は、回答のためにのみ使用し、それ以外の目的には使用しません。</p>
 
-      <h3>3. 第三者への提供</h3>
-      <p>開発者は、法令に基づく場合を除き、利用者の情報を第三者に提供しません。</p>
+        <h3>3. 第三者への提供</h3>
+        <p>開発者は、法令に基づく場合を除き、利用者の情報を第三者に提供しません。</p>
 
-      <h3>4. プライバシーポリシーの変更</h3>
-      <p>本ポリシーの内容は、必要に応じて変更することがあります。変更後の内容は、このページに掲載した時点から適用されます。</p>
+        <h3>4. プライバシーポリシーの変更</h3>
+        <p>本ポリシーの内容は、必要に応じて変更することがあります。変更後の内容は、このページに掲載した時点から適用されます。</p>
 
-      <h3>5. お問い合わせ窓口</h3>
-      <p>本ポリシーに関するお問い合わせは、<a href="#contact">お問い合わせフォーム</a>からお願いします。</p>
+        <h3>5. お問い合わせ窓口</h3>
+        <p>本ポリシーに関するお問い合わせは、<a href="#contact">お問い合わせ</a>に記載のメールアドレスまでお願いします。</p>
 
-      <p class="note">制定日：【YYYY年M月D日】</p>
-    </section>
+        <p class="note">制定日：【YYYY年M月D日】</p>
+      </section>
 
-    <footer>
-      <p><a href="/">開発者</a></p>
-    </footer>
+      <footer>
+        <p><a href="/">開発者</a></p>
+      </footer>
 
-  </main>
-</body>
+    </main>
+  </body>
+
 </html>
