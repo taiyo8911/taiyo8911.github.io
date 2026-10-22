@@ -6,14 +6,27 @@
   <title>SolSE</title>
   <meta name="description" content="SolSEのサイト。アプリ、記事、各種リンク。">
   <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- SNSで共有したときのカード（独自ドメインに切り替えたら URL を書き換える） -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SolSE">
+  <meta property="og:title" content="SolSE">
+  <meta property="og:description" content="SolSEのサイト。アプリ、記事、各種リンク。">
+  <meta property="og:url" content="https://taiyo8911.github.io/">
+  <meta property="og:image" content="https://taiyo8911.github.io/ogp.png">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-  <main class="container">
+  <div class="container">
 
     <header>
       <h1>SolSE</h1>
       <p class="lead">iOSアプリやWebアプリを個人で開発しています。</p>
     </header>
+
+    <main>
 
     <!-- アプリ：新しいアプリを公開したら <li> を1つ追加する -->
     <section id="apps">
@@ -78,10 +91,12 @@
       </ul>
     </section>
 
+    </main>
+
     <footer>
       <p>&copy; SolSE</p>
     </footer>
 
-  </main>
+  </div>
 </body>
 </html>
