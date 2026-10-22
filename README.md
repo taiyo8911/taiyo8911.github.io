@@ -1,6 +1,6 @@
 # taiyo8911.github.io
 
-Taiyoの個人サイト（ハブ）と、アプリの公式ページです。
+SolSEのサイト（ハブ）と、アプリの公式ページです。
 
 - 公開URL：https://taiyo8911.github.io
 - 独自ドメイン：https://sol-se.com（Cloudflareへの移管後に切り替え予定）
@@ -12,6 +12,8 @@ Taiyoの個人サイト（ハブ）と、アプリの公式ページです。
 | `index.html` | ハブ（自己紹介・各種リンク） |
 | `style.css` | サイト全体の共通デザイン |
 | `404.html` | 存在しないURLを開いたときのページ |
+| `favicon.svg` / `apple-touch-icon.png` | ブラウザのタブ・ホーム画面のアイコン |
+| `ogp.png` | SNSで共有したときのカード画像（1200×630） |
 | `apps/アプリ名/` | アプリの公式ページ（紹介・FAQ・問い合わせ・プライバシーポリシー） |
 | `apps/_template/` | 新しいアプリ用のひな形（`_` で始まるため公開されない） |
 
@@ -24,6 +26,10 @@ Webアプリ本体は、それぞれのリポジトリのGitHub Pagesで公開�
 2. `index.html` のアプリ名・説明・リンクなどを書き換え、`icon.png` を置く
 3. ハブ（`index.html`）にリンクを追加する
 4. push する（1〜2分で反映）
+
+## 独自ドメインに切り替えるとき
+
+- `index.html` の `og:url` と `og:image` を `https://sol-se.com/...` に書き換える
 
 ## App Store Connect に登録するURL（sol-se.com 切り替え後）
 

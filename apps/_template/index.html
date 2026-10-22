@@ -19,9 +19,20 @@
   <title>【アプリ名】 サポート</title>
   <meta name="description" content="【アプリ名】のサポート、よくある質問、お問い合わせ、プライバシーポリシー。">
   <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- SNSで共有したときのカード -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SolSE">
+  <meta property="og:title" content="【アプリ名】">
+  <meta property="og:description" content="【ひとことの説明】">
+  <meta property="og:url" content="https://【ドメイン】/apps/【フォルダ名】/">
+  <meta property="og:image" content="https://【ドメイン】/apps/【フォルダ名】/icon.png">
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
-  <main class="container">
+  <div class="container">
 
     <header class="app-header">
       <img class="app-icon" src="icon.png" alt="【アプリ名】のアイコン">
@@ -31,6 +42,8 @@
       </div>
     </header>
 
+    <main>
+
     <p class="actions">
       <!-- iOSアプリの場合（Webアプリなら削除） -->
       <a class="button" href="【App StoreのURL】">App Storeで入手</a>
@@ -39,7 +52,7 @@
       -->
     </p>
 
-    <nav class="toc">
+    <nav class="toc" aria-label="ページ内目次">
       <a href="#about">概要</a>
       <a href="#faq">よくある質問</a>
       <a href="#contact">お問い合わせ</a>
@@ -75,7 +88,7 @@
 
     <section id="privacy" class="policy">
       <h2>【アプリ名】 プライバシーポリシー</h2>
-      <p>Taiyo（以下「開発者」）は、アプリ「【アプリ名】」（以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。</p>
+      <p>SolSE（以下「開発者」）は、アプリ「【アプリ名】」（以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。</p>
 
       <h3>1. 取得する情報</h3>
       <p>本アプリは、氏名・メールアドレス・位置情報などの個人を特定できる情報を収集しません。本アプリで作成・入力されたデータは、利用者の端末内にのみ保存されます。</p>
@@ -113,10 +126,12 @@
       <p class="note">制定日：【YYYY年M月D日】</p>
     </section>
 
+    </main>
+
     <footer>
-      <p><a href="/">Taiyo</a> ／ &copy; Taiyo</p>
+      <p><a href="/">SolSE</a> ／ &copy; SolSE</p>
     </footer>
 
-  </main>
+  </div>
 </body>
 </html>
